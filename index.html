@@ -15,14 +15,15 @@
     }
 
     button {
-      padding: 16px 32px;
-      font-size: 18px;
+      padding: 5vw 10vw;
+      font-size: clamp(24px, 5vw, 64px);
       border: none;
-      border-radius: 8px;
+      border-radius: 2vw;
       cursor: pointer;
       background-color: #2ecc71;
       color: white;
       transition: background-color 0.3s ease;
+      width: clamp(280px, 60vw, 800px);
     }
   </style>
 </head>
@@ -31,7 +32,7 @@
 
   <script>
     const colors = ['#2ecc71', '#3498db', '#e74c3c', '#f39c12', '#9b59b6', '#1abc9c', '#e67e22', '#e91e63', '#00bcd4', '#8bc34a'];
-    let currentIndex = 0;
+    let currentIndex = -1;
 
     function changeColor() {
       currentIndex = (currentIndex + 1) % colors.length;
